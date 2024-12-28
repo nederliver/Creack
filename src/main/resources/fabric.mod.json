@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "creack",
+	"version": "${version}",
+	"name": "Creack",
+	"description": "Simple mod that plays sound when game have been first loaded.",
+	"authors": [
+		"nederliver"
+	],
+	"contact": {
+		"donate": "https://ko-fi.com/nederliver",
+		"modrinth": "https://modrinth.com/user/nederliver"
+	},
+	"license": "ARR",
+	"icon": "assets/creack/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.nederliver.creack.Creack"
+		],
+		"client": [
+			"net.nederliver.creack.CreackClient"
+		],
+		"fabric-datagen": [
+			"net.nederliver.creack.CreackDataGenerator"
+		]
+	},
+	"mixins": [
+		"creack.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
