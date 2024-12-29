@@ -14,7 +14,7 @@ public class CreackClient implements ClientModInitializer {
     public void onInitializeClient() {
         ScreenEvents.AFTER_INIT.register((client, screen, scaledWidth, scaledHeight) -> {
             if (screen instanceof TitleScreen && !hasPlayedSound) {
-                hasPlayedSound = true; // Mark the sound as played
+                hasPlayedSound = true;
                 playMenuSound();
             }
         });
